@@ -8,8 +8,6 @@ import java.util.Optional;
 
 public interface ClientRepository extends JpaRepository <Client, Long> {
 
-    // Creo un método que calcula la diferencia en años entre una fecha y otra.
-    public default Integer getAge(LocalDate birthdate) {
-        return Period.between(birthdate, LocalDate.now()).getYears();
-    }
+
+
 }

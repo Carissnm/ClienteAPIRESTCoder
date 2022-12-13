@@ -25,9 +25,10 @@ public class ClientService {
         return clientRepository.findById(id);
     }
 
-    // Creo un método que llama al método para calcular la edad de Repository.
-    public Integer getAge(LocalDate date) {
-        return clientRepository.getAge(date);
+    // Creo un método que calcula la diferencia en años entre una fecha y otra.
+    public Integer getAge(Long id) {
+        Optional<Client> client = clientRepository.findById(id);
+        return Period.between(client.get().getBirthday(), LocalDate.now()).getYears();
     }
 
 }

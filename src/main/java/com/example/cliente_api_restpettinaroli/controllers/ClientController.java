@@ -27,8 +27,7 @@ public class ClientController {
         Optional<Client> client = clientService.findClientById(id);
 
         if (client.isPresent()) {
-            LocalDate birthday = client.get().getBirthday(); // capturo la edad del cliente.
-            Integer age = clientService.getAge(birthday); // utilizo el método creado en service.
+            Integer age = clientService.getAge(id); // utilizo el método creado en service.
             //Instancio clientDTO para poder mostrar nombre y apellido del cliente más el dato de la edad.
             ClientDTO clientDTO = new ClientDTO(client.get().getName(), client.get().getSurname(), age);
             return ResponseEntity.ok(clientDTO);
