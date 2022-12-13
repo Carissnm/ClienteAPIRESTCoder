@@ -25,6 +25,7 @@ public class ClientService {
         return clientRepository.findById(id);
     }
 
+    // Creo un método que llama al método para calcular la edad de Repository.
     public Integer getAge(LocalDate date) {
         return clientRepository.getAge(date);
     }

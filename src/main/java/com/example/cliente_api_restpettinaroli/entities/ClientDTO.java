@@ -1,9 +1,11 @@
 package com.example.cliente_api_restpettinaroli.entities;
-
+// Genero una clase ClientDTO para poder modelar la información que quiero mostrar al buscar al cliente
 
 public class ClientDTO {
     private String name;
     private String surname;
+
+    // Aquí defino edad, atributo que quiero mostrar al hacer la búsqueda por id del cliente.
     private Integer age;
 
     public ClientDTO() {
