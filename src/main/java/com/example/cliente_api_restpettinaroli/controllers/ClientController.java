@@ -33,7 +33,7 @@ public class ClientController {
             ClientDTO clientDTO = new ClientDTO(client.get().getName(), client.get().getSurname(), age);
             return ResponseEntity.ok(clientDTO);
         } else {
-            return new ResponseEntity<>("Sorry, we couldn't find Client with id " + id, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("Sorry, we couldn't find any client with id " + id, HttpStatus.NOT_FOUND);
         }
     }
 
